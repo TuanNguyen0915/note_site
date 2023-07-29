@@ -8,7 +8,7 @@ function CreateArea(props) {
       return { ...prevNote, [name]: value };
     });
   }
-  function handleOnClick(event) {
+  function addNoteToList(event) {
     props.addNote(note);
     setNote({ title: "", content: "" });
     event.preventDefault();
@@ -18,7 +18,7 @@ function CreateArea(props) {
       <form>
         <input onChange={handleOnChange} name="title" value={note.title} placeholder="Title" />
         <textarea onChange={handleOnChange} name="content" value={note.content} placeholder="Take a note..." rows="3" />
-        <button onClick={handleOnClick}>Add</button>
+        <button onClick={addNoteToList}>Add</button>
       </form>
     </div>
   );
