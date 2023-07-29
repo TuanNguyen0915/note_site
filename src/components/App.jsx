@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-function App() {
+export default function App() {
   // Add newNote to list by clicking "add" button
   const [notes, setNotes] = useState([]);
   function addToNotes(newNote) {
@@ -32,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
